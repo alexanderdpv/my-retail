@@ -29,8 +29,13 @@
   margin-bottom: 4rem;
 }
 
+.item-images-thumbnails {
+  display: inline-block;
+}
+
 .item-images-thumbnail {
   display: inline-block;
+  margin-bottom: 1rem;
   width: 4rem;
   height: 4rem;
 }
@@ -162,6 +167,7 @@
 
 .reviews {
   display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .reviews-pro-con-container {
@@ -170,13 +176,18 @@
 }
 
 .reviews-headline-container {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid lightgrey;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 
 .fa-star {
   color: #BC200F;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+  color: grey;
+  font-size: 1.5rem !important;
 }
 
 .reviews-headline {
@@ -191,6 +202,7 @@
 .reviews-header {
   font-size: .75rem;
   font-weight: 600;
+  height: 15px;
   padding-bottom: 1rem;
 }
 
@@ -198,12 +210,43 @@
   float: right;
 }
 
+.reviews-stars {
+  margin: 0 1px;
+}
+
 .reviews-overall-stars {
   font-size: 1.25rem !important;
+  float: left;
   margin: 0 1px;
+}
+
+.reviews-title {
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.reviews-review-container {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+.reviews-description, .reviews-user-date {
+  font-size: .75rem;
+  margin-bottom: 1rem;
+}
+
+.reviews-username {
+  color: #3366BB;
+}
+
+.reviews-title-container {
+  display: inline-block;
+  width: 50%;
 }
 
 .reviews-overall-label {
   display: inline-block;
+  float: left;
   margin-left: .5rem;
 }

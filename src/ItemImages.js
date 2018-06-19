@@ -14,12 +14,16 @@ class ItemImages extends Component {
           ))
         ))}
 
-        <div className="item-images-thumbnails">
-        {images.map((itemImage) => (
-          itemImage.AlternateImages.map((alternateImage) => (
-            <img className="item-images-thumbnail" src={alternateImage.image}/>
-          ))
-        ))}
+        <div className="review-thumbails-container">
+          <i className="reviews-stars fa fa-chevron-left"></i>
+          <div className="item-images-thumbnails">
+            {images.map((itemImage) => (
+              itemImage.AlternateImages.map((alternateImage) => (
+                <img className="item-images-thumbnail" src={alternateImage.image}/>
+              ))
+            ))}
+          </div>
+          <i className="reviews-stars fa fa-chevron-right"></i>
         </div>
       </div>
     )
