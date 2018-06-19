@@ -5,6 +5,7 @@ import Quantity from './Quantity';
 import PurchaseActions from './PurchaseActions';
 import ItemDescription from './ItemDescription';
 import ItemImages from './ItemImages';
+import Reviews from './Reviews';
 import * as CatalogService from './CatalogService';
 import './App.css';
 import "font-awesome/css/font-awesome.css";
@@ -34,6 +35,7 @@ class App extends Component {
               <Quantity></Quantity>
               <PurchaseActions returnPolicy={catalogItem.ReturnPolicy}></PurchaseActions>
               <ItemDescription itemDescriptions={catalogItem.ItemDescription}></ItemDescription>
+              <Reviews reviews={catalogItem.CustomerReview}></Reviews>
             </div>
           </div>
         ))}
