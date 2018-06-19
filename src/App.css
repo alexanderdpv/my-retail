@@ -54,7 +54,7 @@
 }
 
 .promotion-short-description {
-  color: #B82C1A;
+  color: #BC200F;
   line-height: 1.5rem;
 }
 
@@ -136,15 +136,16 @@
   border: none;
   border-radius: 3px;
   color: grey;
-  font-size: .5rem;
-  line-height: .75rem;
+  font-size: .70rem;
+  line-height: 1.25rem;
   margin: 0 2px;
   padding: .2rem 0;
-  width: 125px;
+  width: 135px;
   text-transform: uppercase;
 }
 
 .item-description-list {
+  padding-left: 1rem;
   text-align: left;
 }
 

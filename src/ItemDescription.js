@@ -11,7 +11,7 @@ class ItemDescription extends Component {
         <ul className="item-description-list">
           {itemDescriptions.map((description) => (
             description.features.map((feature) => (
-              <li className="item-description-feature">{feature}</li>
+              <li className="item-description-feature" dangerouslySetInnerHTML={{__html: feature}}></li>
             ))
           ))}
         </ul>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class PurchaseActions extends Component {
   state = {
-    legalCopy: 'this is overriden'
+    legalCopy: ''
   }
 
   componentDidMount() {
@@ -22,7 +22,7 @@ class PurchaseActions extends Component {
 
         <div className="purchase-returns">
           <span className="purchase-return-label">returns</span>
-          <span className="purchase-return-policy">{this.state.legalCopy}</span>
+          <span className="purchase-return-policy" dangerouslySetInnerHTML={{__html: this.state.legalCopy}}></span>
         </div>
 
         <button className="purchase-secondary-cta">Add to Registry</button>
