@@ -1,0 +1,159 @@
+.App {
+  text-align: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.item-images, .item-details {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+}
+
+.item-details {
+  text-align: left;
+}
+
+.item-images-title {
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+.item-images-primary {
+  margin-bottom: 4rem;
+}
+
+.item-images-thumbnail {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+}
+
+.price-value {
+  display: inline-block;
+  font-size: 1.75rem;
+}
+
+.price-qualifier {
+  color: grey;
+  font-size: .75rem;
+  margin-left: .5rem;
+  text-transform: lowercase;
+}
+
+.promotion {
+  border-top: 1px lightgrey solid;
+  border-bottom: 1px lightgrey solid;
+  padding: 1rem 0;
+}
+
+.promotion-short-description {
+  color: #B82C1A;
+  line-height: 1.5rem;
+}
+
+.quantity {
+  border: 1px lightgrey solid;
+  padding: .2rem;
+  margin: 1.25rem 0;
+  width: 200px;
+}
+
+.quantity-label {
+  color: grey;
+  font-size: .75rem;
+}
+
+.round-button {
+  color: white;
+  background-color: lightgrey;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 200;
+  height: 1.75rem;
+  margin: 2px;
+  width: 1.75rem;
+}
+
+.purchase-primary-cta {
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: .5rem 0;
+  margin-right: .5rem;
+  width: 200px;
+  text-transform: uppercase;
+}
+
+.purchase-primary-cta.pick-up {
+  background-color: black;
+}
+
+.purchase-primary-cta.add-cart {
+  background-color: #BB261A;
+}
+
+.purchase-find-in-store {
+  color: black;
+  font-size: .625rem;
+  font-weight: 600;
+  margin-left: 5rem;
+  display: block;
+  text-decoration: none;
+}
+
+.purchase-returns {
+  padding: 1rem 0;
+}
+
+.purchase-return-label {
+  color: grey;
+  display: inline-block;
+  font-weight: 300;
+  line-height: 1.5rem;
+  border-right: 1px lightgrey solid;
+  padding: 0 .75rem;
+}
+
+.purchase-return-policy {
+  color: grey;
+  font-size: .3rem;
+  padding: .5rem .75rem;
+}
+
+.purchase-secondary-cta {
+  background-color: #F3F3F3;
+  border: none;
+  border-radius: 3px;
+  color: grey;
+  font-size: .5rem;
+  line-height: .75rem;
+  margin: 0 2px;
+  padding: .2rem 0;
+  width: 125px;
+  text-transform: uppercase;
+}
+
+.item-description-list {
+  text-align: left;
+}
+
+.item-description-title {
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.item-description-feature {
+  color: grey;
+  font-size: .75rem;
+  line-height: 1.5rem;
+}
