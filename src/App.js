@@ -7,6 +7,7 @@ import ItemDescription from './ItemDescription';
 import ItemImages from './ItemImages';
 import * as CatalogService from './CatalogService';
 import './App.css';
+import "font-awesome/css/font-awesome.css";
 
 class App extends Component {
   state = {

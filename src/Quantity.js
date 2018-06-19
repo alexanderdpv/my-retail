@@ -5,9 +5,9 @@ class Quantity extends Component {
     return (
       <div className="quantity">
         <span className="quantity-label">quantity: </span>
-        <button className="quantity-decrement round-button">-</button>
+        <i className="quantity-decrement fa fa-minus-circle"></i>
         <span className="quantity-value">1</span>
-        <button className="quantity-increment round-button">+</button>
+        <i className="quantity-increment fa fa-plus-circle"></i>
       </div>
     )
   }

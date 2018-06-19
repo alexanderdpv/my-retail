@@ -58,28 +58,29 @@
   line-height: 1.5rem;
 }
 
+.promotion-tag-icon {
+  color: #B82C1A;
+  margin-right: .5rem;
+}
+
 .quantity {
   border: 1px lightgrey solid;
   padding: .2rem;
   margin: 1.25rem 0;
+  height: 24px;
   width: 200px;
 }
 
 .quantity-label {
   color: grey;
   font-size: .75rem;
+  margin-right: 5rem;
 }
 
-.round-button {
-  color: white;
-  background-color: lightgrey;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  font-weight: 200;
-  height: 1.75rem;
-  margin: 2px;
-  width: 1.75rem;
+.quantity-decrement, .quantity-increment {
+  color: lightgrey;
+  font-size: 1.5rem !important;
+  margin: 0 .3rem;
 }
 
 .purchase-primary-cta {
