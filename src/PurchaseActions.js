@@ -11,13 +11,33 @@ class PurchaseActions extends Component {
     ));
   }
 
+  renderChannelButtons() {
+    const { channelCode } = this.props;
+
+    if (channelCode == 0) {
+      return (
+        <div>
+          <button className="purchase-primary-cta pick-up">Pick Up In Store</button>
+          <button className="purchase-primary-cta add-cart">Add To Cart</button>
+        </div>
+      )
+    } else if (channelCode == 1) {
+      return (
+        <button className="purchase-primary-cta add-cart">Add To Cart</button>
+      )
+    } else if (channelCode == 2) {
+      return (
+        <button className="purchase-primary-cta pick-up">Pick Up In Store</button>
+      )
+    }
+  }
+
   render () {
     const { returnPolicy } = this.props;
 
     return (
       <div className="purchase-actions">
-        <button className="purchase-primary-cta pick-up">Pick Up In Store</button>
-        <button className="purchase-primary-cta add-cart">Add To Cart</button>
+        {this.renderChannelButtons()}
         <a href="www.target.com" className="purchase-find-in-store">find in a store</a>
 
         <div className="purchase-returns">

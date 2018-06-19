@@ -33,7 +33,7 @@ class App extends Component {
               <Price offers={catalogItem.Offers}></Price>
               <Promotion promotions={catalogItem.Promotions}></Promotion>
               <Quantity></Quantity>
-              <PurchaseActions returnPolicy={catalogItem.ReturnPolicy}></PurchaseActions>
+              <PurchaseActions channelCode={catalogItem.purchasingChannelCode} returnPolicy={catalogItem.ReturnPolicy}></PurchaseActions>
               <ItemDescription itemDescriptions={catalogItem.ItemDescription}></ItemDescription>
               <Reviews reviews={catalogItem.CustomerReview}></Reviews>
             </div>
