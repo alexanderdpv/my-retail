@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 class ItemImages extends Component {
   state = {
     currentIndex: 0,
-    thumbnailStartIndex: 0,
-    thumbnailEndIndex: 2,
     itemImages: []
   }
 
@@ -13,7 +11,7 @@ class ItemImages extends Component {
 
     this.previousImage = this.previousImage.bind(this);
     this.nextImage = this.nextImage.bind(this);
-    this.renderPrimaryImage = this.renderPrimaryImage.bind(this);
+    this.renderPreviousImage = this.renderPreviousImage.bind(this);
   }
 
   componentDidMount() {
@@ -53,14 +51,18 @@ class ItemImages extends Component {
     }
   }
 
-  renderPrimaryImage() {
-    if (this.state.currentIndex >= 0 && this.state.currentIndex < this.state.itemImages.length) {
+  renderPreviousImage() {
+    if (this.state.currentIndex - 1 >= 0) {
       return (
-        <div className="item-images-thumbnails">
-          <img className="item-images-thumbnail" src={this.state.itemImages[this.state.currentIndex - 1]}/>
-          <img className="item-images-thumbnail viewing" src={this.state.itemImages[this.state.currentIndex]}/>
-          <img className="item-images-thumbnail" src={this.state.itemImages[this.state.currentIndex + 1]}/>
-        </div>
+        <img className="item-images-thumbnail" src={this.state.itemImages[this.state.currentIndex - 1]}/>
+      )
+    }
+  }
+
+  renderNextImage() {
+    if (this.state.currentIndex + 1 < this.state.itemImages.length) {
+      return (
+        <img className="item-images-thumbnail" src={this.state.itemImages[this.state.currentIndex + 1]}/>
       )
     }
   }
@@ -83,7 +85,11 @@ class ItemImages extends Component {
           <a href="#" onClick={this.previousImage}>
             <i className="item-images-chevron fa fa-chevron-left" ></i>
           </a>
-          {this.renderPrimaryImage()}
+          <div className="item-images-thumbnails">
+            {this.renderPreviousImage()}
+            <img className="item-images-thumbnail viewing" src={this.state.itemImages[this.state.currentIndex]}/>
+            {this.renderNextImage()}
+          </div>
           <a href="#" onClick={this.nextImage}>
             <i className="item-images-chevron fa fa-chevron-right"></i>
           </a>
