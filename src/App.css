@@ -186,8 +186,12 @@
 }
 
 .fa-chevron-left, .fa-chevron-right {
+  bottom: 40px;
   color: grey;
   font-size: 1.5rem !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
 }
 
 .reviews-headline {
@@ -249,4 +253,24 @@
   display: inline-block;
   float: left;
   margin-left: .5rem;
+}
+
+.fa-search-plus {
+  color: grey;
+  font-size: 1.75rem !important;
+}
+
+.item-images-zoom-label {
+  color: grey;
+  display: inline-block;
+  font-size: .75rem;
+  padding-left: 5px;
+}
+
+.item-images-zoom-container {
+  margin-bottom: 1rem;
+}
+
+.item-images {
+  padding: 1rem;
 }

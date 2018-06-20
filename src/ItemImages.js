@@ -14,8 +14,13 @@ class ItemImages extends Component {
           ))
         ))}
 
-        <div className="review-thumbails-container">
-          <i className="reviews-stars fa fa-chevron-left"></i>
+        <div className="item-images-zoom-container">
+          <i className="fa fa-search-plus"></i>
+          <div className="item-images-zoom-label">view larger</div>
+        </div>
+
+        <div className="item-images-thumbnails-container">
+          <i className="item-images-chevron fa fa-chevron-left"></i>
           <div className="item-images-thumbnails">
             {images.map((itemImage) => (
               itemImage.AlternateImages.map((alternateImage) => (
@@ -23,7 +28,7 @@ class ItemImages extends Component {
               ))
             ))}
           </div>
-          <i className="reviews-stars fa fa-chevron-right"></i>
+          <i className="item-images-chevron fa fa-chevron-right"></i>
         </div>
       </div>
     )
