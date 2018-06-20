@@ -281,3 +281,8 @@
 .item-images {
   padding: 1rem;
 }
+
+.viewing {
+  border: 1px solid grey;
+  border-radius: 4px;
+}
