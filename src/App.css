@@ -77,9 +77,16 @@
 }
 
 .quantity-label {
+  bottom: 5px;
   color: grey;
   font-size: .75rem;
   margin-right: 5rem;
+  position: relative;
+}
+
+.quantity-value {
+  bottom: 3px;
+  position: relative;
 }
 
 .quantity-decrement, .quantity-increment {
