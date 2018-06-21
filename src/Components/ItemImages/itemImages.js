@@ -15,8 +15,7 @@ class ItemImages extends Component {
   }
 
   componentDidMount() {
-    let itemImages = this.state.itemImages.slice(),
-        thumbnailImages = [];
+    let itemImages = this.state.itemImages.slice();
 
     // Add primary image
     this.props.images.map((image) => (
@@ -49,7 +48,7 @@ class ItemImages extends Component {
   renderPreviousImage() {
     if (this.state.currentIndex - 1 >= 0) {
       return (
-        <img className="item-images-thumbnail" src={this.state.itemImages[this.state.currentIndex - 1]}/>
+        <img className="item-images-thumbnail" alt="Previous" src={this.state.itemImages[this.state.currentIndex - 1]}/>
       )
     }
   }
@@ -57,19 +56,19 @@ class ItemImages extends Component {
   renderNextImage() {
     if (this.state.currentIndex + 1 < this.state.itemImages.length) {
       return (
-        <img className="item-images-thumbnail" src={this.state.itemImages[this.state.currentIndex + 1]}/>
+        <img className="item-images-thumbnail" alt="Next" src={this.state.itemImages[this.state.currentIndex + 1]}/>
       )
     }
   }
 
   render () {
-    const { images, title } = this.props;
+    const { title } = this.props;
 
     return (
       <div className="item-images col-6">
         <h2 className="item-images-title">{title}</h2>
 
-        <img className="item-images-primary" src={this.state.itemImages[this.state.currentIndex]}/>
+        <img className="item-images-primary" alt="primary" src={this.state.itemImages[this.state.currentIndex]}/>
 
         <div className="item-images-zoom-container">
           <i className="fa fa-search-plus"></i>
@@ -82,7 +81,7 @@ class ItemImages extends Component {
           </a>
           <div className="item-images-thumbnails">
             {this.renderPreviousImage()}
-            <img className="item-images-thumbnail viewing" src={this.state.itemImages[this.state.currentIndex]}/>
+            <img className="item-images-thumbnail viewing" alt="current thumbnail" src={this.state.itemImages[this.state.currentIndex]}/>
             {this.renderNextImage()}
           </div>
           <a href="#" onClick={this.nextImage}>

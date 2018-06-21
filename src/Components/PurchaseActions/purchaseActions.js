@@ -6,7 +6,9 @@ class PurchaseActions extends Component {
   }
 
   componentDidMount() {
-    this.props.returnPolicy.map((policy) => (
+    const { returnPolicy } = this.props;
+
+    returnPolicy.map((policy) => (
       this.setState({ legalCopy : policy.legalCopy })
     ));
   }
@@ -33,12 +35,10 @@ class PurchaseActions extends Component {
   }
 
   render () {
-    const { returnPolicy } = this.props;
-
     return (
       <div className="purchase-actions">
         {this.renderChannelButtons()}
-        <a href="www.target.com" className="purchase-find-in-store">find in a store</a>
+        <a href="#" className="purchase-find-in-store">find in a store</a>
 
         <div className="purchase-returns">
           <span className="purchase-return-label">returns</span>
