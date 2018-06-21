@@ -1,3 +1,10 @@
+/* Reset */
+p {
+  font-size: 100%;
+  font: inherit;
+  line-height: inherit;
+}
+
 .App {
   text-align: center;
 }
@@ -202,11 +209,15 @@
 .reviews-headline-container {
   border-bottom: 1px solid lightgrey;
   padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: .75rem;
 }
 
 .fa-star {
   color: #BC200F;
+}
+
+.empty-star {
+  color: grey;
 }
 
 .fa-chevron-left, .fa-chevron-right {
@@ -235,12 +246,22 @@
   padding-left: 1rem;
 }
 
+.reviews-header .reviews-stars-container {
+  float: left;
+  font-size: 1.2rem;
+}
+
 .reviews-view-all {
   float: right;
 }
 
 .reviews-stars {
   margin: 0 1px;
+}
+
+.reviews-stars-container {
+  display: inline-block;
+  font-size: .75rem;
 }
 
 .reviews-overall-stars {
@@ -280,6 +301,10 @@
   margin-left: .5rem;
 }
 
+.reviews-overall-label, .reviews-view-all {
+  line-height: 1.75rem;
+}
+
 .fa-search-plus {
   color: grey;
   font-size: 1.75rem !important;
@@ -313,7 +338,7 @@
 
 @media only screen and (max-width: 768px) {
     [class*="col-"] {
-        width: 100%;
+        width: auto !important;
     }
 
     .row {

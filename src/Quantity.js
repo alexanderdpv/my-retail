@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
 
 class Quantity extends Component {
+  state = {
+    quantity: 1
+  }
+
+  constructor(props) {
+    super(props);
+
+    this.incrementQuantity = this.incrementQuantity.bind(this);
+    this.decrementQuantity = this.decrementQuantity.bind(this);
+  }
+
+  incrementQuantity() {
+    this.state({ quantity : this.state.quantity + 1 })
+  }
+
+  decrementQuantity() {
+    this.state({ quantity : this.state.quantity + 1 })
+  }
+
   render () {
     return (
       <div className="quantity">

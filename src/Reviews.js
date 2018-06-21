@@ -7,12 +7,20 @@ class Reviews extends Component {
     this.renderReviewStars = this.renderReviewStars.bind(this);
   }
 
-  renderReviewStars(overallRating) {
-    if (overallRating) {
-      return (
-        <i className="reviews-stars fa fa-star"></i>
-      )
+  renderReviewStars(stars) {
+    const starIcons = [];
+
+    for (let i = 0; i < 5; i++) {
+      if (i < stars) {
+        starIcons.push(<i className="reviews-stars fa fa-star"></i>)
+      } else {
+        starIcons.push(<i className="reviews-stars empty-star fa fa-star"></i>)
+      }
     }
+
+    return (
+      <div className="reviews-stars-container">{starIcons}</div>
+    )
   }
 
   render () {
@@ -23,7 +31,7 @@ class Reviews extends Component {
         {reviews.map((review) => (
           <div>
             <div className="reviews-header">
-              <i className="reviews-overall-stars fa fa-star"></i>
+              {this.renderReviewStars(review.consolidatedOverallRating)}
               <div className="reviews-overall-label">overall</div>
               <div className="reviews-view-all">view all {review.totalReviews} reviews</div>
             </div>
@@ -43,7 +51,7 @@ class Reviews extends Component {
 
               {review.Pro.map((review) => (
                 <div className="reviews-review-container">
-                  {this.renderReviewStars(5)}
+                  {this.renderReviewStars(review.overallRating)}
                   <div className="reviews-title">{review.title}</div>
                   <div className="reviews-description">{review.review}</div>
                   <div className="reviews-user-date">
@@ -54,9 +62,7 @@ class Reviews extends Component {
 
               {review.Con.map((review) => (
                 <div className="reviews-review-container">
-                  {Array.apply(null, Array(review.overallRating)).map((i) => (
-                    <i className="reviews-stars fa fa-star"></i>
-                  ))}
+                  {this.renderReviewStars(review.overallRating)}
                   <div className="reviews-title">{review.title}</div>
                   <div className="reviews-description">{review.review}</div>
                   <div className="reviews-user-date">
