@@ -13,20 +13,26 @@ class Quantity extends Component {
   }
 
   incrementQuantity() {
-    this.state({ quantity : this.state.quantity + 1 })
+    this.setState({ quantity : this.state.quantity + 1 })
   }
 
   decrementQuantity() {
-    this.state({ quantity : this.state.quantity + 1 })
+    if (this.state.quantity > 1) {
+      this.setState({ quantity : this.state.quantity - 1 })
+    }
   }
 
   render () {
     return (
       <div className="quantity">
         <span className="quantity-label">quantity: </span>
-        <i className="quantity-decrement fa fa-minus-circle"></i>
-        <span className="quantity-value">1</span>
-        <i className="quantity-increment fa fa-plus-circle"></i>
+        <a href="#" onClick={this.decrementQuantity}>
+          <i className="quantity-decrement fa fa-minus-circle"></i>
+        </a>
+        <span className="quantity-value">{this.state.quantity}</span>
+        <a href="#" onClick={this.incrementQuantity}>
+          <i className="quantity-increment fa fa-plus-circle"></i>
+        </a>
       </div>
     )
   }

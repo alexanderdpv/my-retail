@@ -5,6 +5,17 @@ class Reviews extends Component {
     super(props);
 
     this.renderReviewStars = this.renderReviewStars.bind(this);
+    this.formatDate = this.formatDate.bind(this);
+  }
+
+  formatDate(date) {
+    const formattedDate = new Date(date);
+
+    return (
+      <div className="reviews-formatted-date">
+        {formattedDate.toDateString()}
+      </div>
+    )
   }
 
   renderReviewStars(stars) {
@@ -55,7 +66,7 @@ class Reviews extends Component {
                   <div className="reviews-title">{review.title}</div>
                   <div className="reviews-description">{review.review}</div>
                   <div className="reviews-user-date">
-                    <span className="reviews-username">{review.screenName}</span> {(review.datePosted)}
+                    <span className="reviews-username">{review.screenName}</span> {this.formatDate(review.datePosted)}
                   </div>
                 </div>
               ))}
@@ -66,7 +77,7 @@ class Reviews extends Component {
                   <div className="reviews-title">{review.title}</div>
                   <div className="reviews-description">{review.review}</div>
                   <div className="reviews-user-date">
-                    <span className="reviews-username">{review.screenName}</span> {(review.datePosted)}
+                    <span className="reviews-username">{review.screenName}</span> {this.formatDate(review.datePosted)}
                   </div>
                 </div>
               ))}
