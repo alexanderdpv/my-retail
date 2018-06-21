@@ -32,11 +32,6 @@ class ItemImages extends Component {
       ))
     ));
     this.setState({ itemImages });
-
-
-    // Initialize thumbnails
-    this.state.itemImages[this.state.thumbnailStartIndex];
-    this.state.itemImages[this.state.thumbnailEndIndex]
   }
 
   previousImage() {

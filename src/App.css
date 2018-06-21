@@ -10,13 +10,19 @@
   font-size: large;
 }
 
-.item-images, .item-details {
+/* .item-images, .item-details {
   display: inline-block;
-  width: 45%;
   vertical-align: top;
+} */
+
+.container {
+  display: flex;
+  max-width: none !important;
+  width: 95% !important;
 }
 
 .item-details {
+  padding: 1rem;
   text-align: left;
 }
 
@@ -27,6 +33,7 @@
 
 .item-images-primary {
   margin-bottom: 4rem;
+  max-width: 100%;
 }
 
 .item-images-thumbnails {
@@ -43,6 +50,7 @@
 .price-value {
   display: inline-block;
   font-size: 1.75rem;
+  margin: .5rem 0;
 }
 
 .price-qualifier {
@@ -55,7 +63,7 @@
 .promotion {
   border-top: 1px lightgrey solid;
   border-bottom: 1px lightgrey solid;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .promotion-short-description {
@@ -80,7 +88,8 @@
   bottom: 5px;
   color: grey;
   font-size: .75rem;
-  margin-right: 5rem;
+  margin-left: .2rem;
+  margin-right: 4rem;
   position: relative;
 }
 
@@ -92,7 +101,7 @@
 .quantity-decrement, .quantity-increment {
   color: lightgrey;
   font-size: 1.5rem !important;
-  margin: 0 .3rem;
+  margin: 0 .5rem;
 }
 
 .purchase-primary-cta {
@@ -103,7 +112,7 @@
   font-weight: 300;
   padding: .5rem 0;
   margin-right: .5rem;
-  width: 200px;
+  width: 45%;
   text-transform: uppercase;
 }
 
@@ -152,18 +161,24 @@
   line-height: 1.25rem;
   margin: 0 2px;
   padding: .2rem 0;
-  width: 135px;
+  width: 32%;
   text-transform: uppercase;
 }
 
-.item-description-list {
-  padding-left: 1rem;
+.item-description {
+  padding: 1rem;
   text-align: left;
 }
 
 .item-description-title {
   font-weight: 400;
+  margin: 0;
   text-transform: lowercase;
+}
+
+.item-description-list {
+  padding-left: 1rem;
+  text-align: left;
 }
 
 .item-description-feature {
@@ -174,12 +189,13 @@
 
 .reviews {
   display: inline-block;
-  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .reviews-pro-con-container {
   background-color: #F6F5F5;
   padding: 1rem;
+  text-align: left;
 }
 
 .reviews-headline-container {
@@ -215,6 +231,7 @@
   font-weight: 600;
   height: 15px;
   padding-bottom: 1rem;
+  padding-left: 1rem;
 }
 
 .reviews-view-all {
@@ -285,4 +302,10 @@
 .viewing {
   border: 1px solid grey;
   border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
 }

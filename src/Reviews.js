@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 
 class Reviews extends Component {
+  constructor(props) {
+    super(props);
+
+    this.renderReviewStars = this.renderReviewStars.bind(this);
+  }
+
+  renderReviewStars(overallRating) {
+    if (overallRating) {
+      return (
+        <i className="reviews-stars fa fa-star"></i>
+      )
+    }
+  }
+
   render () {
     const { reviews } = this.props;
 
@@ -9,9 +23,7 @@ class Reviews extends Component {
         {reviews.map((review) => (
           <div>
             <div className="reviews-header">
-              {Array.apply(null, Array(5)).map((i) => (
-                <i className="reviews-overall-stars fa fa-star"></i>
-              ))}
+              <i className="reviews-overall-stars fa fa-star"></i>
               <div className="reviews-overall-label">overall</div>
               <div className="reviews-view-all">view all {review.totalReviews} reviews</div>
             </div>
@@ -31,9 +43,7 @@ class Reviews extends Component {
 
               {review.Pro.map((review) => (
                 <div className="reviews-review-container">
-                  {Array.apply(null, Array(5)).map((i) => (
-                    <i className="reviews-stars fa fa-star"></i>
-                  ))}
+                  {this.renderReviewStars(5)}
                   <div className="reviews-title">{review.title}</div>
                   <div className="reviews-description">{review.review}</div>
                   <div className="reviews-user-date">
@@ -44,7 +54,7 @@ class Reviews extends Component {
 
               {review.Con.map((review) => (
                 <div className="reviews-review-container">
-                  {Array.apply(null, Array(5)).map((i) => (
+                  {Array.apply(null, Array(review.overallRating)).map((i) => (
                     <i className="reviews-stars fa fa-star"></i>
                   ))}
                   <div className="reviews-title">{review.title}</div>

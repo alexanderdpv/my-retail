@@ -8,6 +8,7 @@ import ItemImages from './ItemImages';
 import Reviews from './Reviews';
 import * as CatalogService from './CatalogService';
 import './App.css';
+import './simple-grid.min.css';
 import "font-awesome/css/font-awesome.css";
 
 class App extends Component {
@@ -25,17 +26,23 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         {this.state.catalogItems.map((catalogItem) => (
           <div>
-            <ItemImages images={catalogItem.Images} title={catalogItem.title}></ItemImages>
-            <div className="item-details">
-              <Price offers={catalogItem.Offers}></Price>
-              <Promotion promotions={catalogItem.Promotions}></Promotion>
-              <Quantity></Quantity>
-              <PurchaseActions channelCode={catalogItem.purchasingChannelCode} returnPolicy={catalogItem.ReturnPolicy}></PurchaseActions>
-              <ItemDescription itemDescriptions={catalogItem.ItemDescription}></ItemDescription>
-              <Reviews reviews={catalogItem.CustomerReview}></Reviews>
+            <div className="row">
+              <div className="col-6">
+                <ItemImages images={catalogItem.Images} title={catalogItem.title} className=""></ItemImages>
+                <Reviews reviews={catalogItem.CustomerReview}></Reviews>
+              </div>
+              <div className="col-6">
+                <div className="item-details">
+                  <Price offers={catalogItem.Offers}></Price>
+                  <Promotion promotions={catalogItem.Promotions}></Promotion>
+                  <Quantity></Quantity>
+                  <PurchaseActions channelCode={catalogItem.purchasingChannelCode} returnPolicy={catalogItem.ReturnPolicy}></PurchaseActions>
+                  <ItemDescription itemDescriptions={catalogItem.ItemDescription}></ItemDescription>
+                </div>
+              </div>
             </div>
           </div>
         ))}
