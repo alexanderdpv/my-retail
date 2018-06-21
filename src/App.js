@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import Price from './Price';
-import Promotion from './Promotion';
-import Quantity from './Quantity';
-import PurchaseActions from './PurchaseActions';
-import ItemDescription from './ItemDescription';
-import ItemImages from './ItemImages';
-import Reviews from './Reviews';
-import * as CatalogService from './CatalogService';
+import ItemDescription from './Components/ItemDescription/itemDescription';
+import ItemImages from './Components/ItemImages/itemImages';
+import Reviews from './Components/Reviews/reviews';
+import ItemDetails from './Components/ItemDetails/itemDetails';
 import './simple-grid.min.css';
 import './App.css';
 import 'font-awesome/css/font-awesome.css';
-
 
 class App extends Component {
   state = {
@@ -31,15 +26,10 @@ class App extends Component {
         {this.state.catalogItems.map((catalogItem) => (
           <div>
             <div className="row">
-              <ItemImages images={catalogItem.Images} title={catalogItem.title}></ItemImages>
-              <Reviews reviews={catalogItem.CustomerReview}></Reviews>
-              <div className="item-details col-6">
-                <Price offers={catalogItem.Offers}></Price>
-                <Promotion promotions={catalogItem.Promotions}></Promotion>
-                <Quantity></Quantity>
-                <PurchaseActions channelCode={catalogItem.purchasingChannelCode} returnPolicy={catalogItem.ReturnPolicy}></PurchaseActions>
-              </div>
-              <ItemDescription itemDescriptions={catalogItem.ItemDescription}></ItemDescription>
+              <ItemImages images={catalogItem.Images} title={catalogItem.title}/>
+              <ItemDetails item={catalogItem}/>
+              <Reviews reviews={catalogItem.CustomerReview}/>
+              <ItemDescription itemDescriptions={catalogItem.ItemDescription}/>
             </div>
           </div>
         ))}
