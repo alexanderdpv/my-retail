@@ -5,7 +5,7 @@ class ItemDescription extends Component {
     const { itemDescriptions } = this.props;
 
     return (
-      <div className="item-description">
+      <div className="item-description col-6">
         <h1 className="item-description-title">Product Highlights</h1>
 
         <ul className="item-description-list">

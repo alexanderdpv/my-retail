@@ -66,7 +66,7 @@ class ItemImages extends Component {
     const { images, title } = this.props;
 
     return (
-      <div className="item-images">
+      <div className="item-images col-6">
         <h2 className="item-images-title">{title}</h2>
 
         <img className="item-images-primary" src={this.state.itemImages[this.state.currentIndex]}/>

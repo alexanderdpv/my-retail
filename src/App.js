@@ -30,19 +30,15 @@ class App extends Component {
         {this.state.catalogItems.map((catalogItem) => (
           <div>
             <div className="row">
-              <div className="col-6">
-                <ItemImages images={catalogItem.Images} title={catalogItem.title} className=""></ItemImages>
-                <Reviews reviews={catalogItem.CustomerReview}></Reviews>
+              <ItemImages images={catalogItem.Images} title={catalogItem.title}></ItemImages>
+              <Reviews reviews={catalogItem.CustomerReview}></Reviews>
+              <div className="item-details col-6">
+                <Price offers={catalogItem.Offers}></Price>
+                <Promotion promotions={catalogItem.Promotions}></Promotion>
+                <Quantity></Quantity>
+                <PurchaseActions channelCode={catalogItem.purchasingChannelCode} returnPolicy={catalogItem.ReturnPolicy}></PurchaseActions>
               </div>
-              <div className="col-6">
-                <div className="item-details">
-                  <Price offers={catalogItem.Offers}></Price>
-                  <Promotion promotions={catalogItem.Promotions}></Promotion>
-                  <Quantity></Quantity>
-                  <PurchaseActions channelCode={catalogItem.purchasingChannelCode} returnPolicy={catalogItem.ReturnPolicy}></PurchaseActions>
-                  <ItemDescription itemDescriptions={catalogItem.ItemDescription}></ItemDescription>
-                </div>
-              </div>
+              <ItemDescription itemDescriptions={catalogItem.ItemDescription}></ItemDescription>
             </div>
           </div>
         ))}

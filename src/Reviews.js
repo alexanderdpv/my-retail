@@ -19,7 +19,7 @@ class Reviews extends Component {
     const { reviews } = this.props;
 
     return (
-      <div className="reviews">
+      <div className="reviews col-6">
         {reviews.map((review) => (
           <div>
             <div className="reviews-header">
