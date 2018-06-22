@@ -15,7 +15,10 @@ class App extends Component {
         {itemData.CatalogEntryView.map((catalogItem) => (
           <div key={catalogItem} className="row">
             <ItemImages images={catalogItem.Images} title={catalogItem.title}/>
-            <ItemDetails item={catalogItem}/>
+
+            <ItemDetails offers={catalogItem.Offers} promotions={catalogItem.Promotions}
+              channelCode={catalogItem.purchasingChannelCode} returnPolicy={catalogItem.ReturnPolicy}/>
+
             <Reviews reviews={catalogItem.CustomerReview}/>
             <ItemDescription itemDescriptions={catalogItem.ItemDescription}/>
           </div>

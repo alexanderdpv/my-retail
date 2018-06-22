@@ -23,5 +23,5 @@ describe('Price component', () => {
     const priceComponent = shallow(<Price offers={offersData}/>);
     expect(priceComponent.find('.price-value').text()).toEqual("$139.99");
     expect(priceComponent.find('.price-qualifier').text()).toEqual("Online Price");
-  })
+  });
 })

@@ -1,6 +1,6 @@
 # myRetail Application
 
-React-based web application for an online retail store.
+React-based web application for an online retail store. 🎯
 
 ### Installation
 Download node dependencies

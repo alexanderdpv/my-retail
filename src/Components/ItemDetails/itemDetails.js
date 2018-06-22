@@ -6,14 +6,14 @@ import PurchaseActions from '../PurchaseActions/purchaseActions';
 
 class ItemDetails extends Component {
   render () {
-    const { item } = this.props;
+    const { offers, promotions, channelCode, returnPolicy } = this.props;
 
     return (
       <div className="item-details col-6">
-        <Price offers={item.Offers}/>
-        <Promotion promotions={item.Promotions}/>
+        <Price offers={offers}/>
+        <Promotion promotions={promotions}/>
         <Quantity/>
-        <PurchaseActions channelCode={item.purchasingChannelCode} returnPolicy={item.ReturnPolicy}/>
+        <PurchaseActions channelCode={channelCode} returnPolicy={returnPolicy}/>
       </div>
     )
   }
