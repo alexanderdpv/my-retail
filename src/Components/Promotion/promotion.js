@@ -8,7 +8,7 @@ class Promotion extends Component {
       <div className="promotion">
         {promotions.map((promotion) => (
           promotion.Description.map((promoDescription) => (
-            <div>
+            <div key={promoDescription}>
               <i className="promotion-tag-icon fa fa-tag"></i>
               <span className="promotion-short-description">{promoDescription.shortDescription}</span>
             </div>

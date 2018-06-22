@@ -8,7 +8,7 @@ class Price extends Component {
       <div className="price">
         {offers.map((offer) => (
           offer.OfferPrice.map((offerPrice) => (
-            <div className="price-offer">
+            <div key={offerPrice} className="price-offer">
               <h3 className="price-value">{offerPrice.formattedPriceValue}</h3>
               <span className="price-qualifier">{offerPrice.priceQualifier}</span>
             </div>

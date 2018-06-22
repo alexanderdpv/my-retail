@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App container">
         {itemData.CatalogEntryView.map((catalogItem) => (
-          <div className="row">
+          <div key={catalogItem} className="row">
             <ItemImages images={catalogItem.Images} title={catalogItem.title}/>
             <ItemDetails item={catalogItem}/>
             <Reviews reviews={catalogItem.CustomerReview}/>

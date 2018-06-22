@@ -23,9 +23,9 @@ class Reviews extends Component {
 
     for (let i = 0; i < 5; i++) {
       if (i < stars) {
-        starIcons.push(<i className="reviews-stars fa fa-star"></i>)
+        starIcons.push(<i key={i} className="reviews-stars fa fa-star"></i>)
       } else {
-        starIcons.push(<i className="reviews-stars empty-star fa fa-star"></i>)
+        starIcons.push(<i key={i} className="reviews-stars empty-star fa fa-star" ></i>)
       }
     }
 
@@ -40,7 +40,7 @@ class Reviews extends Component {
     return (
       <div className="reviews col-6">
         {reviews.map((review) => (
-          <div>
+          <div key={review}>
             <div className="reviews-header">
               {this.renderReviewStars(review.consolidatedOverallRating)}
               <div className="reviews-overall-label">overall</div>
@@ -61,7 +61,7 @@ class Reviews extends Component {
               </div>
 
               {review.Pro.map((review) => (
-                <div className="reviews-review-container">
+                <div key={review} className="reviews-review-container">
                   {this.renderReviewStars(review.overallRating)}
                   <div className="reviews-title">{review.title}</div>
                   <div className="reviews-description">{review.review}</div>
@@ -72,7 +72,7 @@ class Reviews extends Component {
               ))}
 
               {review.Con.map((review) => (
-                <div className="reviews-review-container">
+                <div key={review} className="reviews-review-container">
                   {this.renderReviewStars(review.overallRating)}
                   <div className="reviews-title">{review.title}</div>
                   <div className="reviews-description">{review.review}</div>
