@@ -26,13 +26,13 @@ class Quantity extends Component {
     return (
       <div className="quantity">
         <span className="quantity-label">quantity: </span>
-        <a href="#" onClick={this.decrementQuantity}>
+        <button onClick={this.decrementQuantity}>
           <i className="quantity-decrement fa fa-minus-circle"></i>
-        </a>
+        </button>
         <span className="quantity-value">{this.state.quantity}</span>
-        <a href="#" onClick={this.incrementQuantity}>
+        <button onClick={this.incrementQuantity}>
           <i className="quantity-increment fa fa-plus-circle"></i>
-        </a>
+        </button>
       </div>
     )
   }

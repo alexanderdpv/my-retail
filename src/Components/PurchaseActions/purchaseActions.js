@@ -15,19 +15,20 @@ class PurchaseActions extends Component {
 
   renderChannelButtons() {
     const { channelCode } = this.props;
+    const channelCodeInt = Number.parseInt(channelCode, 10);
 
-    if (channelCode === 0) {
+    if (channelCodeInt === 0) {
       return (
-        <div>
+        <div className="purchase-shopping-links">
           <button className="purchase-primary-cta pick-up">Pick Up In Store</button>
           <button className="purchase-primary-cta add-cart">Add To Cart</button>
         </div>
       )
-    } else if (channelCode === 1) {
+    } else if (channelCodeInt === 1) {
       return (
         <button className="purchase-primary-cta add-cart">Add To Cart</button>
       )
-    } else if (channelCode === 2) {
+    } else if (channelCodeInt === 2) {
       return (
         <button className="purchase-primary-cta pick-up">Pick Up In Store</button>
       )
@@ -38,7 +39,7 @@ class PurchaseActions extends Component {
     return (
       <div className="purchase-actions">
         {this.renderChannelButtons()}
-        <a href="#" className="purchase-find-in-store">find in a store</a>
+        <a href="http://www.target.com" className="purchase-find-in-store">find in a store</a>
 
         <div className="purchase-returns">
           <span className="purchase-return-label">returns</span>

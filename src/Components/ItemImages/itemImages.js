@@ -76,17 +76,17 @@ class ItemImages extends Component {
         </div>
 
         <div className="item-images-thumbnails-container">
-          <a href="#" onClick={this.previousImage}>
+          <button onClick={this.previousImage}>
             <i className="item-images-chevron fa fa-chevron-left" ></i>
-          </a>
+          </button>
           <div className="item-images-thumbnails">
             {this.renderPreviousImage()}
             <img className="item-images-thumbnail viewing" alt="current thumbnail" src={this.state.itemImages[this.state.currentIndex]}/>
             {this.renderNextImage()}
           </div>
-          <a href="#" onClick={this.nextImage}>
+          <button href="#" onClick={this.nextImage}>
             <i className="item-images-chevron fa fa-chevron-right"></i>
-          </a>
+          </button>
         </div>
       </div>
     )
