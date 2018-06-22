@@ -11,7 +11,7 @@ npm install
 ### Builds
 Generates production files and places them under `/build` directory
 ```
-npm build
+yarn build
 ```
 
 ### Testing
