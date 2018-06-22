@@ -60,6 +60,10 @@ button {
   height: 4rem;
 }
 
+.item-images-thumbnails-container > button {
+  display: contents;
+}
+
 .price-value {
   display: inline-block;
   font-size: 1.75rem;
